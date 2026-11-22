@@ -10,7 +10,7 @@ export const BottomNav: React.FC = () => {
     { to: '/', label: 'Accueil', icon: Home, exact: true },
     { to: '/cart', label: 'Panier', icon: ShoppingBag, badge: totalArticles },
     { to: '/orders', label: 'Commandes', icon: ClipboardList },
-    { to: '/login', label: 'Compte', icon: User },
+    { to: '/compte', label: 'Compte', icon: User },
   ];
 
   return (

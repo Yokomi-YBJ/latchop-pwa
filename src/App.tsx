@@ -11,6 +11,8 @@ import { CheckoutPage } from './pages/CheckoutPage';
 import { LoginPage } from './pages/LoginPage';
 import { RegisterPage } from './pages/RegisterPage';
 import { OrdersPage } from './pages/OrdersPage';
+import { ProfilePage } from './pages/ProfilePage';
+import { TermsPage } from './pages/TermsPage';
 import { NotFoundPage } from './pages/NotFoundPage';
 
 const queryClient = new QueryClient({
@@ -34,6 +36,7 @@ export const App: React.FC = () => {
               <Route path="/cart" element={<CartPage />} />
               <Route path="/login" element={<LoginPage />} />
               <Route path="/register" element={<RegisterPage />} />
+              <Route path="/cgu" element={<TermsPage />} />
 
               {/* Routes protégées réservées aux clients connectés */}
               <Route
@@ -49,6 +52,14 @@ export const App: React.FC = () => {
                 element={
                   <ProtectedRoute>
                     <OrdersPage />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/compte"
+                element={
+                  <ProtectedRoute>
+                    <ProfilePage />
                   </ProtectedRoute>
                 }
               />
